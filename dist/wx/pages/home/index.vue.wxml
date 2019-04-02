@@ -1,0 +1,16 @@
+<template name="ad3609fe">
+  <view class="_div data-v-63abd07b"> 首页 <i-button type="primary" bindtap="handleProxy" size="large" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_i-button data-v-63abd07b">大尺寸</i-button>
+    <i-toast id="toast" class="_i-toast data-v-63abd07b"></i-toast>
+    <swiper indicator-dots="{{true}}" autoplay="{{true}}" interval="{{4000}}" duration="{{300}}" class="_swiper data-v-63abd07b">
+      <swiper-item wx:key="index" key="{{index}}" wx:for="{{bannerdata}}" wx:for-index="index" wx:for-item="item" class="_swiper-item data-v-63abd07b">
+        <image src="{{item}}" class="_image data-v-63abd07b slide-image" width="355" height="150"></image>
+      </swiper-item>
+    </swiper>
+    <i-cell-group class="_i-cell-group data-v-63abd07b">
+      <i-cell wx:key="item.id" key="{{item.id}}" bindtap="handleProxy" data-eventid="{{'1_'+index}}" data-comkey="{{$k}}" wx:for="{{prolist}}" wx:for-index="index" wx:for-item="item" class="_i-cell data-v-63abd07b">
+        <image src="{{item.images.small}}" alt="{{item.alt}}" class="_image data-v-63abd07b"></image>
+        <view class="_h1 data-v-63abd07b">{{ item.title }}</view> 1111111111111
+      </i-cell>
+    </i-cell-group>
+  </view>
+</template>

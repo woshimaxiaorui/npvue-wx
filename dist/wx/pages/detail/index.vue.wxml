@@ -1,0 +1,4 @@
+<template name="0be172f3">
+  <view class="_div data-v-8dcbfda6"> 详情 --- {{ title }}
+  </view>
+</template>

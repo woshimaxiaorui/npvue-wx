@@ -1,0 +1,7 @@
+<template name="4c889dad">
+  <view class="_ul data-v-8367fa58">
+    <view wx:key="index" key="{{index}}" wx:for="{{prolist}}" wx:for-index="index" wx:for-item="item" class="_li data-v-8367fa58">
+      {{ item.title }}
+    </view>
+  </view>
+</template>

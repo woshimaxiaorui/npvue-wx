@@ -1,0 +1,32 @@
+1、创建项目
+  vue init mpvue/mpvue-quickstart my-project
+  cd my-project
+  cnpm i
+  cnpm run dev
+2、打开微信开发者工具，直接将目录选中导入即可，主要是my-project这个目录
+3、在pages下创建了home/kind/cart/user几个文件夹
+  以home文件夹为例
+    home
+      index.vue // 页面组件 --- 跟vue的写法一样
+      main.js // 不用管
+      main.json // 可以配置页面信息，可以导入组件
+      store.js // 状态管理器 ---- 固定写法
+4、如果需要调用组件的数据
+  import store from './store'  // import store from '@/pages/home/store';
+  computed: {
+    data1 () {
+      return store.state.data1
+    }
+  },
+  mounted () {
+    request().then(data => {
+      store.dispatch('type', data)
+    })
+  }
+5、如果要使用UI库 iview-weapp
+  下载UI库，拷贝dist目录到static下
+    home/main.json
+      "usingComponents": {
+        "i-button": "/static/dist/button/index"
+      }
+6、如果需要调用系统的功能，需要使用微信小程序的api
